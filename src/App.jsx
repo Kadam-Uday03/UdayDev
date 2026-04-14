@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import editionStudioImg from './assets/editionstudio.png';
 import airJordanImg from './assets/airJordan.png';
 import miniStoreImg from './assets/miniStore.png';
+import logoImg from './assets/logo.png';
+import udayImg from './assets/uday.png';
 
 // Common components to match the design's recurring elements
 const PillLabel = ({ children }) => (
@@ -27,7 +29,7 @@ function Header({ onNavigate }) {
   return (
     <header className="w-full py-6 px-6 md:px-12 flex justify-between items-center bg-white sticky top-0 z-50">
       <div className="flex items-center gap-2 font-bold text-xl tracking-tight cursor-pointer" onClick={() => { onNavigate('home'); setIsMenuOpen(false); }}>
-        <img src="/images/logo.png" alt="Uday.Dev Logo" className="h-6 object-contain" />
+        <img src={logoImg} alt="Uday.Dev Logo" className="h-6 object-contain" />
         Uday.Dev
       </div>
       
@@ -82,9 +84,9 @@ function Hero() {
         </h1>
         {/* Sliding Partners Animation inside Hero */}
         <div className="mt-8 md:mt-12 py-4 flex flex-wrap justify-center md:justify-start gap-4 overflow-hidden mask-fade w-full max-w-2xl mx-auto md:mx-0">
-           {['coinbase', 'spotify', 'zoom', 'slack', 'dropbox'].map((p, i) => (
-             <div key={i} className="flex items-center gap-2 px-5 py-2 md:px-6 md:py-3 bg-gray-100 rounded-full text-xs md:text-sm font-semibold text-gray-700 whitespace-nowrap shadow-sm">
-               <div className="w-3 h-3 md:w-4 md:h-4 bg-gray-300 rounded-full"></div>
+           {['WordPress', 'Shopify', 'Framer', 'Figma', 'VS Code', 'GitHub', 'React', 'Tailwind CSS'].map((p, i) => (
+             <div key={i} className="flex items-center gap-2 px-5 py-2 md:px-6 md:py-3 bg-gray-100 rounded-full text-xs md:text-sm font-semibold text-gray-700 whitespace-nowrap shadow-sm hover:bg-gray-200 transition-colors cursor-default">
+               <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-black rounded-full opacity-40"></div>
                {p}
              </div>
            ))}
@@ -92,7 +94,7 @@ function Hero() {
       </div>
       <div className="shrink-0 w-full md:w-64 lg:w-72 flex flex-col justify-between gap-8 md:gap-4 items-center md:items-end">
         <div className="w-56 sm:w-64 md:w-full h-56 sm:h-64 md:h-[18rem] rounded-[2rem] overflow-hidden bg-gray-100 object-cover shrink-0 shadow-sm border-4 border-white">
-          <img src="/images/uday.png" alt="Portrait" className="w-full h-full object-cover" />
+          <img src={udayImg} alt="Portrait" className="w-full h-full object-cover" />
         </div>
         <div className="text-sm font-medium text-center md:text-right md:text-base lg:text-[1.2rem] xl:text-[1.2rem] leading-relaxed w-full text-gray-600 max-w-xs md:max-w-none">
           Hi, I'm Uday.Dev, a Web <br className="hidden md:block" />
@@ -289,7 +291,7 @@ function Testimonial() {
         </p>
         <div className="flex items-center justify-center gap-4">
           <div className="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
-             <img src="/images/uday.png" className="w-full h-full object-cover" alt="Author" />
+             <img src={udayImg} className="w-full h-full object-cover" alt="Author" />
           </div>
           <div className="text-left">
             <div className="text-sm font-bold">Uday Kadam</div>
@@ -321,7 +323,7 @@ function Footer() {
       <div className="px-6 md:px-12 py-16 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-12 text-xs font-medium text-gray-400">
         <div className="lg:col-span-4">
           <div className="flex items-center gap-2 font-bold text-xl tracking-tight text-white mb-6">
-            <img src="/images/logo.png" alt="Uday.Dev Logo" className="h-6 object-contain brightness-0 invert" />
+            <img src={logoImg} alt="Uday.Dev Logo" className="h-6 object-contain brightness-0 invert" />
             Uday.Dev
           </div>
           <p className="leading-relaxed max-w-xs mb-8">
